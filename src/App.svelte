@@ -1,11 +1,15 @@
 <script>
-	export let name;
+  let name = "John Doe";
+  let points = 100;
 </script>
 
 <style>
-	h1 {
-		color: purple;
-	}
+  h1 {
+    color: purple;
+  }
 </style>
 
-<h1>Hello {name}!</h1>
+<div>
+  <h1>{name}</h1>
+  <h3>{points}</h3>
+</div>
