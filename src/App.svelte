@@ -3,7 +3,14 @@
   import Player from "./Player.svelte";
 
   let players = [
-
+    {
+      name: "John Doe",
+      points: 50,
+    },
+    {
+      name: "Sam Doe",
+      points: 15,
+    },
   ];
 </script>
 
@@ -17,7 +24,7 @@
     <p>No players</p>
   {:else}
     {#each players as player}
-      <Player />
+      <Player name={player.name} points={player.points} />
     {/each}
   {/if}
 </div>
