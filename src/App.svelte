@@ -1,4 +1,5 @@
 <script>
+  import Navbar from "./Navbar.svelte";
   let name = "John Doe";
   let points = 100;
   let show_controls = false;
@@ -25,6 +26,8 @@
     text-align: center;
   }
 </style>
+
+<Navbar />
 
 <div>
   <h1>
