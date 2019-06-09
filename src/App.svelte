@@ -13,6 +13,10 @@
       points: 15,
     },
   ];
+
+  const addPlayer = e => {
+    players = [...players,e.detail];
+  }
 </script>
 
 <style>
@@ -21,7 +25,7 @@
 
 <Navbar />
 
-<AddPlayer />
+<AddPlayer on:addPlayer={addPlayer} />
 
 <div>
   {#if players.length === 0}
