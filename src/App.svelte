@@ -6,17 +6,21 @@
   let players = [
     {
       name: "John Doe",
-      points: 50,
+      points: 50
     },
     {
       name: "Sam Doe",
-      points: 15,
-    },
+      points: 15
+    }
   ];
 
   const addPlayer = e => {
-    players = [...players,e.detail];
-  }
+    players = [...players, e.detail];
+  };
+
+  const deletePlayer = index => {
+    players = players.filter((_v, i) => i !== index);
+  };
 </script>
 
 <style>
@@ -31,8 +35,11 @@
   {#if players.length === 0}
     <p>No players</p>
   {:else}
-    {#each players as player}
-      <Player name={player.name} points={player.points} />
+    {#each players as player, index}
+      <Player
+        name={player.name}
+        points={player.points}
+        on:deletePlayer={() => deletePlayer(index)} />
     {/each}
   {/if}
 </div>
