@@ -17,7 +17,8 @@
 
 <div>
   <h1>{name}</h1>
-  <h3>{points}</h3>
+  <h3>{points||0}</h3>
   <button on:click={addPoint}>+1</button>
   <button on:click={removePoint}>-1</button>
+  <input type="number" bind:value={points}>
 </div>
